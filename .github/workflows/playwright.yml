@@ -26,4 +26,4 @@ jobs:
         path: playwright-report/
         retention-days: 30
 
-        # groups: uk-aks-runners //recomented in NG project
+        # groups: uk-aks-runners //recomented in NG project 
