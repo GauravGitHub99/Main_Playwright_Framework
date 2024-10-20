@@ -12,6 +12,7 @@ test('P1: Critical Test Case', async function ({page}) {
     await page.waitForTimeout(2000);
 })
 
+
 test.afterEach('parametrized methods', async ({page}) => {
     const pm = new PageManager(page);
     
