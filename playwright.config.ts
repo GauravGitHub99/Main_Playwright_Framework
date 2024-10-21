@@ -32,7 +32,21 @@ const config = {
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'line',  //'html'
+  reporter: [
+    process.env.CI ? ["dot"] : ["list"],
+    [
+      "@argos-ci/playwright/reporter",
+      {
+        // Upload to Argos on CI only.
+        uploadToArgos: !!process.env.CI,
+      },
+    ],
+    ["allure-playwright"],
+    ['json', {outputFile: 'test-results/jsonReport.json'}],
+    ['junit', {outputFile: 'test-results/junitReport.xml'}],
+    ['allure-playwright']
+    ],
+  
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
@@ -42,6 +56,7 @@ const config = {
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    screenshot: "only-on-failure",
   },
 
   /* Configure projects for major browsers */
