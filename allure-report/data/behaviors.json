@@ -1,1 +1,1 @@
-{"uid":"b1a8273437954620fa374b796ffaacdd","name":"behaviors","children":[]}
+{"uid":"b1a8273437954620fa374b796ffaacdd","name":"behaviors","children":[{"name":"P1: Critical Test Case","uid":"ff4af9fef2b27da5","parentUid":"b1a8273437954620fa374b796ffaacdd","status":"passed","time":{"start":1729487973744,"stop":1729487987143,"duration":13399},"flaky":false,"newFailed":false,"newPassed":false,"newBroken":false,"retriesCount":3,"retriesStatusChange":false,"parameters":["chromium"],"tags":[]}]}

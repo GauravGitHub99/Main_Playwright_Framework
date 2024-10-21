@@ -1,0 +1,2 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","13399","P1: Critical Test Case","chromium","Mon Oct 21 10:49:33 IST 2024","passed","Mon Oct 21 10:49:47 IST 2024","","steps\Login.spec.ts","",""

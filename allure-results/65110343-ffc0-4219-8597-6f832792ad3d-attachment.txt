@@ -1,0 +1,4 @@
+on home page
+testConfiguration is visible
+click on home symbol to navigate back
+verified that I came back to home
